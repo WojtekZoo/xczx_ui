@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="list">
+    <ul>
+        <!--v-for 遍历， v-if 筛选条件-->
+        <li v-for="(item, index) in list" :key="index" v-if="item % 2 === 0">{{index}} == {{item}}</li>
+    </ul>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var VM = new Vue({
+        el: '#list',
+        data: {
+            list: [1, 2, 3, 4, 5]
+        }
+    })
+</script>
+</body>
+</html>
